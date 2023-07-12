@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mi Fiesta de cumpleaños</title>
+    <style>
+        @font-face {
+            font-family: unicorn;
+            src: url('PWHappyChristmas.ttf');
+        }
+
+        @font-face {
+            font-family: love;
+            src: url('LoveLadyPersonalUse.ttf');
+        }
+
+        @font-face {
+            font-family: report;
+            src: url('1942.ttf');
+        }
+
+        @font-face {
+            font-family: mercy;
+            src: url('Mercy Christole.ttf');
+        }
+
+        * {
+            font-family: report, serif;
+            text-align: center;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: radial-gradient(circle at 50% -20.71%, #bae1e3 0, #bae0e6 5.56%, #bbe0e8 11.11%, #bcdfeb 16.67%, #bedfed 22.22%, #c0deef 27.78%, #c3ddf0 33.33%, #c6dcf1 38.89%, #c9dbf2 44.44%, #cddaf2 50%, #d1d9f2 55.56%, #d5d8f1 61.11%, #d9d7f0 66.67%, #ddd6ee 72.22%, #e1d5ed 77.78%, #e4d4ea 83.33%, #e8d3e8 88.89%, #ebd2e5 94.44%, #edd2e2 100%);
+        }
+
+        h1 {
+            font-family: unicorn, serif;
+            font-size: 45px;
+            color: #59b6d3;
+            position: relative;
+        }
+
+        h1 i {
+            position: relative;
+            font-family: unicorn, serif;
+            font-size: 30px;
+            top: -15px;
+        }
+
+        h1 b {
+            position: absolute;
+            top: -33px;
+            left: 175px;
+        }
+
+        h3 {
+            font-family: love, serif;
+            font-size: 25px;
+            color: #e2b1d0;
+        }
+
+        span {
+            font-family: mercy, serif;
+        }
+
+        .mt-5 {
+            margin-top: 40px;
+        }
+
+        p {
+            margin: 3px;
+            color: #5700ff;
+        }
+
+        .container {
+            width: 318px;
+            padding: 20px;
+            background: #FFFFFF;
+            border-radius: 15px;
+            -moz-box-shadow: 0 0 209px -19px rgba(0, 0, 0, 0.75);
+            box-shadow: 0 0 209px -19px rgba(0, 0, 0, 0.75);
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        a {
+            text-decoration: none;
+            animation: crescendo 1.5s alternate infinite ease-in;
+        }
+
+        @keyframes crescendo {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.3);
+            }
+        }
+
+        #name{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <img src="img2.png" alt="">
+    <span id="name">Hola</span>
+    <span>Han sido invitado a</span>
+    <h1>Mi 1<i>er</i> An<b>~</b>ito</h1>
+    <h3>Aitana Mendoza Álvarez</h3>
+    <p>Sábado, 29 de julio 2023, 3pm. Calle 51 esquina 240</p>
+    <span class="mt-5">
+        TE ESPERAMOS, NO FALTES
+    </span>
+
+    <a class="mt-5" href="https://forms.gle/i6B5E897QSC6XLao9" target="_blank">
+        Confirma tu presencia
+    </a>
+</div>
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('name');
+    if (name && name !== '') {
+        const nameContainer = document.getElementById('name')
+        nameContainer.innerText = 'Hola ' + name
+    }
+</script>
+</body>
+</html>
